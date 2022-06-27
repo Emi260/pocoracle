@@ -1,8 +1,6 @@
 --liquibase formatted sql
 
 --changeset case:1
-create table users(
-  id int primary key,
-  name varchar(30),
-  keys  varchar(10)
-)
+CREATE TABLE test_table (test_id INT, test_column VARCHAR, PRIMARY KEY (test_id))
+
+--rollback DROP TABLE test_table;
