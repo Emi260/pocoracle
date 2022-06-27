@@ -1,6 +1,11 @@
 --liquibase formatted sql
 
 --changeset case:1
-CREATE TABLE test_table (test_id INT, test_column VARCHAR, PRIMARY KEY (test_id))
+CREATE TABLE DIP.personas(
+    person_id NUMBER,
+    first_name VARCHAR2(50) NOT NULL,
+    last_name VARCHAR2(50) NOT NULL,
+    PRIMARY KEY(person_id)
+);
 
---rollback DROP TABLE test_table;
+--rollback DROP TABLE DIP.personas;
